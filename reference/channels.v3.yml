@@ -2191,3 +2191,4 @@ components:
                   - {language} The language string that the client is using
                 example: /my-amazing-product
       title: site_Full
+      x-internal: true
