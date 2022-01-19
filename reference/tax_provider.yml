@@ -170,82 +170,80 @@ paths:
               schema:
                 $ref: '#/components/schemas/response-quote'
               examples:
-                response:
+                Example:
                   value:
+                    id: string
                     documents:
-                      - id: 5d522b889d3d9
+                      - id: string
+                        external_id: string
                         items:
-                          - id: 088c7465-e5b8-4624-a220-0d9faa82e7cb
+                          - id: string
                             price:
-                              amount_inclusive: 675
-                              amount_exclusive: 450
-                              total_tax: 225
-                              tax_rate: 0.5
+                              amount_inclusive: 0
+                              amount_exclusive: 0
+                              total_tax: 0
+                              tax_rate: 0
                               sales_tax_summary:
-                                - name: Brutal Tax
-                                  rate: 0.5
-                                  amount: 225
+                                - name: string
+                                  rate: 0.1
+                                  amount: 0
                                   tax_class:
-                                    class_id: '0'
-                                    name: Brutal Tax
-                                    code: US
-                                  id: Brutal Tax
+                                    code: string
+                                    class_id: string
+                                    name: string
+                                  id: '1701'
                             type: item
-                            wrapping: null
-                          - id: d2675662-6326-4a23-9107-ab71fa6a21a1
-                            price:
-                              amount_inclusive: 300
-                              amount_exclusive: 200
-                              total_tax: 100
-                              tax_rate: 0.5
-                              sales_tax_summary:
-                                - name: Brutal Tax
-                                  rate: 0.5
-                                  amount: 100
-                                  tax_class:
-                                    class_id: '0'
-                                    name: Brutal Tax
-                                    code: US
-                                  id: Brutal Tax
-                            type: item
-                            wrapping: null
                         shipping:
-                          id: 5d522b889d3d9
-                          price:
-                            amount_inclusive: 15
-                            amount_exclusive: 10
-                            total_tax: 5
-                            tax_rate: 0.5
-                            sales_tax_summary:
-                              - name: Brutal Tax
-                                rate: 0.5
-                                amount: 5
-                                tax_class:
-                                  class_id: '0'
-                                  name: Brutal Tax
-                                  code: US
-                                id: Brutal Tax
-                          type: shipping
-                          wrapping: null
-                        handling:
-                          id: 5d522b889d3d9
+                          id: string
                           price:
                             amount_inclusive: 0
                             amount_exclusive: 0
                             total_tax: 0
-                            tax_rate: 0.5
+                            tax_rate: 0
                             sales_tax_summary:
-                              - name: Brutal Tax
-                                rate: 0.5
+                              - name: string
+                                rate: 0.1
                                 amount: 0
                                 tax_class:
-                                  class_id: '0'
-                                  name: Brutal Tax
-                                  code: US
-                                id: Brutal Tax
-                          type: handling
-                          wrapping: null
-                    id: 3f0c857e-2c55-443e-a89b-c3c4d8a29605
+                                  code: string
+                                  class_id: string
+                                  name: string
+                                id: '1701'
+                          type: item
+                        handling:
+                          id: string
+                          price:
+                            amount_inclusive: 0
+                            amount_exclusive: 0
+                            total_tax: 0
+                            tax_rate: 0
+                            sales_tax_summary:
+                              - name: string
+                                rate: 0.1
+                                amount: 0
+                                tax_class:
+                                  code: string
+                                  class_id: string
+                                  name: string
+                                id: '1701'
+                          type: item
+                        wrapping:
+                          id: string
+                          price:
+                            amount_inclusive: 0
+                            amount_exclusive: 0
+                            total_tax: 0
+                            tax_rate: 0
+                            sales_tax_summary:
+                              - name: string
+                                rate: 0.1
+                                amount: 0
+                                tax_class:
+                                  code: string
+                                  class_id: string
+                                  name: string
+                                id: '1701'
+                          type: item
         '400':
           description: Fallback Tax will be used for this transaction. General response that points to an issue with the incoming request that means a valid response is unable to be returned.
         '401':
