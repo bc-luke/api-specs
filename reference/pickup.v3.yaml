@@ -1,0 +1,46 @@
+openapi: 3.0.1
+info:
+  title: Pickup
+  version: '3.0'
+  termsOfService: 'https://www.bigcommerce.com/terms'
+servers:
+  - url: 'https://api.bigcommerce.com'
+    variables:
+      store_hash:
+        default: store_hash
+paths:
+  '/stores/{store_hash}/v3/pickup/methods':
+    delete:
+      tags:
+        - Pickup Methods
+      description: Delete existing pickup methods.
+      parameters:
+        - name: id:in
+          description: Comma separated list of pickup method IDs.
+          in: query
+          required: false
+          schema:
+            type: integer
+            format: int64
+        - name: store_hash
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Request has been successfully processed.
+      summary: Delete Pickup Methods
+components:
+  securitySchemes:
+    X-Auth-Client:
+      name: X-Auth-Client
+      type: apiKey
+      in: header
+    X-Auth-Token:
+      name: X-Auth-Token
+      type: apiKey
+      in: header
+tags:
+  - name: Pickup
+    description: BigCommerce Pickup API Definition.
